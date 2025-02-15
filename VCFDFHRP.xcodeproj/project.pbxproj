@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		94CA97602D5FC05900F41976 /* ArcGIS in Frameworks */ = {isa = PBXBuildFile; productRef = 94CA975F2D5FC05900F41976 /* ArcGIS */; };
+		94CA97632D5FC1B100F41976 /* ArcGISToolkit in Frameworks */ = {isa = PBXBuildFile; productRef = 94CA97622D5FC1B100F41976 /* ArcGISToolkit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		94CA97492D5FBF0500F41976 /* VCFDFHRP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCFDFHRP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94CA97632D5FC1B100F41976 /* ArcGISToolkit in Frameworks */,
+				94CA97602D5FC05900F41976 /* ArcGIS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +72,8 @@
 			);
 			name = VCFDFHRP;
 			packageProductDependencies = (
+				94CA975F2D5FC05900F41976 /* ArcGIS */,
+				94CA97622D5FC1B100F41976 /* ArcGISToolkit */,
 			);
 			productName = VCFDFHRP;
 			productReference = 94CA97492D5FBF0500F41976 /* VCFDFHRP.app */;
@@ -94,6 +103,10 @@
 			);
 			mainGroup = 94CA97402D5FBF0500F41976;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				94CA975E2D5FC05900F41976 /* XCRemoteSwiftPackageReference "arcgis-maps-sdk-swift" */,
+				94CA97612D5FC1B100F41976 /* XCRemoteSwiftPackageReference "arcgis-maps-sdk-swift-toolkit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 94CA974A2D5FBF0500F41976 /* Products */;
 			projectDirPath = "";
@@ -324,6 +337,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		94CA975E2D5FC05900F41976 /* XCRemoteSwiftPackageReference "arcgis-maps-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/esri/arcgis-maps-sdk-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 200.6.0;
+			};
+		};
+		94CA97612D5FC1B100F41976 /* XCRemoteSwiftPackageReference "arcgis-maps-sdk-swift-toolkit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Esri/arcgis-maps-sdk-swift-toolkit/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 200.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		94CA975F2D5FC05900F41976 /* ArcGIS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94CA975E2D5FC05900F41976 /* XCRemoteSwiftPackageReference "arcgis-maps-sdk-swift" */;
+			productName = ArcGIS;
+		};
+		94CA97622D5FC1B100F41976 /* ArcGISToolkit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94CA97612D5FC1B100F41976 /* XCRemoteSwiftPackageReference "arcgis-maps-sdk-swift-toolkit" */;
+			productName = ArcGISToolkit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 94CA97412D5FBF0500F41976 /* Project object */;
 }
